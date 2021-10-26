@@ -1,11 +1,14 @@
 import React from 'react';
-import { Button } from 'semantic-ui-react'
+import MainMenu from './Components/Menu/Menu';
+import ContactButton from './Components/ContactButton/ContactButton';
 
 function App() {
+  
   return (
-    <div>
-      <Button color="green">Click me</Button>
-    </div>
+    <>
+      <MainMenu />
+      <ContactButton/>
+    </>
   );
 }
 
