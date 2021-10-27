@@ -1,16 +1,19 @@
 import React from 'react';
 import { Route, Switch, Redirect, BrowserRouter as Router } from "react-router-dom";
-import Layout from './hoc/Layout';
 import * as page from './Pages'
 import * as path from './Shared/Paths'
 import {Divider} from 'semantic-ui-react'
 import {Content} from './Components/Content/Content.styled'
+import { Wrapper } from './Components/Wrapper/Wrapper.styled'
+import HeaderMenu from './Components/Menu/Menu'
+import Footer from './Components/Footer/Footer';
 
 function App() {
 
   let routes = (
     <Router>
-    <Layout/>
+      <Wrapper>
+    <HeaderMenu/>
     <Divider/>
     <Content>
     <Switch>
@@ -19,11 +22,12 @@ function App() {
         <Redirect to="/" />
     </Switch>
     </Content>
+    </Wrapper>
+    <Footer/>
     </Router>
   )
   
   return <>
-  
     {routes}
   </>;
 }
