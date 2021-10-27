@@ -15,7 +15,7 @@ function App() {
     <Content>
     <Switch>
         <Route path={path.HomePath} exact component={page.HomePage} />
-        <Route path={path.ContactPath} component={page.ContactPage}/>
+        <Route path={path.ContactPath} exact component={page.ContactPage}/>
         <Redirect to="/" />
     </Switch>
     </Content>

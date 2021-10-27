@@ -1,5 +1,5 @@
 const HomePath = "/";
-const ContactPath = "contactus"
+const ContactPath = "/contactus"
 
 
 export {

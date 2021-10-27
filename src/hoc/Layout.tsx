@@ -1,6 +1,6 @@
 import React from 'react';
-import MainMenu from '../Components/Menu/Menu';
-import ContactButton from '../Components/ContactButton/ContactButton'
+import HeaderMenu from '../Components/Menu/Menu';
+
 
 interface LayoutProps {
     
@@ -8,8 +8,7 @@ interface LayoutProps {
  
 const Layout: React.FunctionComponent<LayoutProps> = (props) => {
     return <>
-    <MainMenu />
-      <ContactButton/>
+    <HeaderMenu />
       <div>{props.children}</div>
     </>;
 }
