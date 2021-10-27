@@ -5,7 +5,7 @@ interface MainMenuProps {
     
 }
  
-const MainMenu: FunctionComponent<MainMenuProps> = () => {
+const MainMenu: FunctionComponent<MainMenuProps> = (props) => {
     const [activeItem, setActiveItem] = useState("home");
 
     const handleItemClick = (name: string) => setActiveItem(name)
@@ -23,6 +23,7 @@ const MainMenu: FunctionComponent<MainMenuProps> = () => {
             active={activeItem === 'contact us'}
             onClick={() => handleItemClick('contact us')}
           />
+          {props.children}
         </StyledMenu>)
 }
  
